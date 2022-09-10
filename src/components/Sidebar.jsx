@@ -1,3 +1,4 @@
+import React from "react";
 import styled from "styled-components";
 import SidebarOption from "./SidebarOption";
 import { useCollection } from "react-firebase-hooks/firestore";
@@ -28,8 +29,7 @@ export default function Sidebar() {
         <SidebarInfo>
           <h2>{user.displayName}</h2>
           <h3>
-            <FiberManualRecordIcon />
-            {user.email}
+            <FiberManualRecordIcon /> {user.email}
           </h3>
         </SidebarInfo>
         <CreateIcon />

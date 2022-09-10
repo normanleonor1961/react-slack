@@ -6,17 +6,18 @@ import { auth, provider } from "../firebase";
 export default function Login() {
   const signIn = (e) => {
     e.preventDefault();
+    console.log("SIGN IN");
+
     auth.signInWithPopup(provider).catch((error) => alert(error.message));
   };
-
   return (
     <LoginContainer>
       <LoginInnerContainer>
         <img
           src="https://cdn.mos.cms.futurecdn.net/SDDw7CnuoUGax6x9mTo7dd.jpg"
-          alt="Google Login"
+          alt="Google"
         />
-        <h1>Sign in to the Ultra's Slack</h1>
+        <h1>Sign in to the +Ultra Slack</h1>
         <p>+ultra.slack.com</p>
 
         <Button type="submit" onClick={signIn}>

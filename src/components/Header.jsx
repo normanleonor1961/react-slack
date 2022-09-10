@@ -3,9 +3,9 @@ import styled from "styled-components";
 import Avatar from "@mui/material/Avatar";
 
 // Icons
-import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import SearchIcon from "@mui/icons-material/Search";
 import HelpIcon from "@mui/icons-material/Help";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../firebase";
 
@@ -25,7 +25,7 @@ export default function Header() {
 
       <HeaderSearch>
         <SearchIcon />
-        <input placeholder="Seach in +Ultra's Channel" />
+        <input placeholder="Search in +Ultra's Channel" />
       </HeaderSearch>
 
       <HeaderRight>

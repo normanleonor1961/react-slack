@@ -1,10 +1,10 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import styled from "styled-components";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
+import styled from "styled-components";
 import Sidebar from "./components/Sidebar";
 import Chat from "./components/Chat";
-import Login from "./components/Login";
 import { useAuthState } from "react-firebase-hooks/auth";
+import Login from "./components/Login";
 import { auth } from "./firebase";
 import Spinner from "react-spinkit";
 
@@ -19,12 +19,11 @@ function App() {
             src="https://cdn.mos.cms.futurecdn.net/SDDw7CnuoUGax6x9mTo7dd.jpg"
             alt="slack logo"
           />
-          <Spinner name="ball-spin-fade-loader" color="purple" fadeIn="none" />
+          <Spinner name="ball-spin-fade-loader" color="red" fadeIn="none" />
         </AppLoadingContents>
       </AppLoading>
     );
   }
-
   return (
     <BrowserRouter>
       {user ? (

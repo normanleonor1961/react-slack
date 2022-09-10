@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
-import { selectRoomId } from "../redux/features/appSlices";
+import { selectRoomId } from "../redux/features/appSlice";
 import { useCollection, useDocument } from "react-firebase-hooks/firestore";
 import { db } from "../firebase";
 import ChatInput from "./ChatInput";
@@ -66,8 +66,8 @@ export default function Chat() {
               );
             })}
           </ChatMessages>
-
           <ChatBottom ref={chatRef} />
+
           <ChatInput
             chatRef={chatRef}
             channelName={roomDetails?.data().name}
@@ -99,7 +99,7 @@ const HeaderLeft = styled.div`
 
   > h4 {
     display: flex;
-    text-transform: lowercase;
+    /* text-transform: lowercase; */
     margin-right: 10px;
   }
 
